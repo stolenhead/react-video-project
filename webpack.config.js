@@ -61,9 +61,9 @@ module.exports = (env) => {
           use: {
             loader: 'url-loader',
             options: {
-              limit: 1000000,
+              limit: 10000,
               fallback: 'file-loader',
-              name: 'images/[name].[hash].[ext]',
+              name: 'images/[name].[sha512:hash:base64:7].[ext]',
             }
           }
         },
